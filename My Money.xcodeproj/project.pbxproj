@@ -7,19 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B1274D4240B758200315649 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1274D3240B758200315649 /* ChartViewController.swift */; };
+		3B1274D6240B758E00315649 /* ExtendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1274D5240B758E00315649 /* ExtendViewController.swift */; };
+		3B1274D9240B760700315649 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1274D8240B760700315649 /* Extension.swift */; };
+		3B45DBFB240A7E2F0038FCC3 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45DBFA240A7E2F0038FCC3 /* TransactionViewController.swift */; };
+		3B45DBFD240A802F0038FCC3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45DBFC240A802F0038FCC3 /* MainViewController.swift */; };
+		3B45DBFF240AE8190038FCC3 /* OverallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45DBFE240AE8190038FCC3 /* OverallViewController.swift */; };
 		3BEF967F240A776E009BD4D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF967E240A776E009BD4D3 /* AppDelegate.swift */; };
 		3BEF9681240A776E009BD4D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF9680240A776E009BD4D3 /* SceneDelegate.swift */; };
-		3BEF9683240A776E009BD4D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF9682240A776E009BD4D3 /* ViewController.swift */; };
+		3BEF9683240A776E009BD4D3 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF9682240A776E009BD4D3 /* WalletViewController.swift */; };
 		3BEF9686240A776E009BD4D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEF9684240A776E009BD4D3 /* Main.storyboard */; };
 		3BEF9688240A7770009BD4D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEF9687240A7770009BD4D3 /* Assets.xcassets */; };
 		3BEF968B240A7770009BD4D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEF9689240A7770009BD4D3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B1274D3240B758200315649 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		3B1274D5240B758E00315649 /* ExtendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendViewController.swift; sourceTree = "<group>"; };
+		3B1274D8240B760700315649 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		3B45DBFA240A7E2F0038FCC3 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		3B45DBFC240A802F0038FCC3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3B45DBFE240AE8190038FCC3 /* OverallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallViewController.swift; sourceTree = "<group>"; };
 		3BEF967B240A776E009BD4D3 /* My Money.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Money.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEF967E240A776E009BD4D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEF9680240A776E009BD4D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3BEF9682240A776E009BD4D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3BEF9682240A776E009BD4D3 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		3BEF9685240A776E009BD4D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3BEF9687240A7770009BD4D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BEF968A240A7770009BD4D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +49,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B1274CF240B748800315649 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3BEF9682240A776E009BD4D3 /* WalletViewController.swift */,
+				3B45DBFE240AE8190038FCC3 /* OverallViewController.swift */,
+				3B45DBFA240A7E2F0038FCC3 /* TransactionViewController.swift */,
+				3B45DBFC240A802F0038FCC3 /* MainViewController.swift */,
+				3B1274D3240B758200315649 /* ChartViewController.swift */,
+				3B1274D5240B758E00315649 /* ExtendViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3B1274D0240B74A500315649 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BEF9684240A776E009BD4D3 /* Main.storyboard */,
+				3BEF9689240A7770009BD4D3 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B1274D1240B74E100315649 /* Supporting File */ = {
+			isa = PBXGroup;
+			children = (
+				3BEF967E240A776E009BD4D3 /* AppDelegate.swift */,
+				3BEF9680240A776E009BD4D3 /* SceneDelegate.swift */,
+				3BEF9687240A7770009BD4D3 /* Assets.xcassets */,
+			);
+			path = "Supporting File";
+			sourceTree = "<group>";
+		};
+		3B1274D2240B751E00315649 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		3B1274D7240B75C700315649 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3B1274D8240B760700315649 /* Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		3BEF9672240A776E009BD4D3 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +115,11 @@
 		3BEF967D240A776E009BD4D3 /* My Money */ = {
 			isa = PBXGroup;
 			children = (
-				3BEF967E240A776E009BD4D3 /* AppDelegate.swift */,
-				3BEF9680240A776E009BD4D3 /* SceneDelegate.swift */,
-				3BEF9682240A776E009BD4D3 /* ViewController.swift */,
-				3BEF9684240A776E009BD4D3 /* Main.storyboard */,
-				3BEF9687240A7770009BD4D3 /* Assets.xcassets */,
-				3BEF9689240A7770009BD4D3 /* LaunchScreen.storyboard */,
+				3B1274D7240B75C700315649 /* Extension */,
+				3B1274D2240B751E00315649 /* Modal */,
+				3B1274D0240B74A500315649 /* View */,
+				3B1274CF240B748800315649 /* Controller */,
+				3B1274D1240B74E100315649 /* Supporting File */,
 				3BEF968C240A7770009BD4D3 /* Info.plist */,
 			);
 			path = "My Money";
@@ -138,9 +196,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BEF9683240A776E009BD4D3 /* ViewController.swift in Sources */,
+				3BEF9683240A776E009BD4D3 /* WalletViewController.swift in Sources */,
+				3B1274D4240B758200315649 /* ChartViewController.swift in Sources */,
 				3BEF967F240A776E009BD4D3 /* AppDelegate.swift in Sources */,
+				3B45DBFB240A7E2F0038FCC3 /* TransactionViewController.swift in Sources */,
+				3B1274D6240B758E00315649 /* ExtendViewController.swift in Sources */,
 				3BEF9681240A776E009BD4D3 /* SceneDelegate.swift in Sources */,
+				3B45DBFD240A802F0038FCC3 /* MainViewController.swift in Sources */,
+				3B1274D9240B760700315649 /* Extension.swift in Sources */,
+				3B45DBFF240AE8190038FCC3 /* OverallViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
