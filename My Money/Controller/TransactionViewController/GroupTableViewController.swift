@@ -64,4 +64,8 @@ class GroupTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationController?.popViewController(animated: true)
+    }
 }

@@ -23,6 +23,7 @@
 		3BEF9686240A776E009BD4D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEF9684240A776E009BD4D3 /* Main.storyboard */; };
 		3BEF9688240A7770009BD4D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEF9687240A7770009BD4D3 /* Assets.xcassets */; };
 		3BEF968B240A7770009BD4D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEF9689240A7770009BD4D3 /* LaunchScreen.storyboard */; };
+		3F04F852240CF6D200C32FF7 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04F851240CF6D200C32FF7 /* Transaction.swift */; };
 		3F7BFE63240B9F940036D53D /* MoneyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BFE62240B9F940036D53D /* MoneyTableViewCell.swift */; };
 		3F7BFE65240BAA400036D53D /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BFE64240BAA400036D53D /* GroupTableViewCell.swift */; };
 		3F7BFE67240BB49B0036D53D /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BFE66240BB49B0036D53D /* GroupTableViewController.swift */; };
@@ -47,6 +48,7 @@
 		3BEF9687240A7770009BD4D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BEF968A240A7770009BD4D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BEF968C240A7770009BD4D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F04F851240CF6D200C32FF7 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Transaction.swift; path = "My Money/Controller/TransactionViewController/Transaction.swift"; sourceTree = SOURCE_ROOT; };
 		3F7BFE62240B9F940036D53D /* MoneyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTableViewCell.swift; sourceTree = "<group>"; };
 		3F7BFE64240BAA400036D53D /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		3F7BFE66240BB49B0036D53D /* GroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		3B1274D2240B751E00315649 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				3F04F851240CF6D200C32FF7 /* Transaction.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				3B1274D4240B758200315649 /* ChartViewController.swift in Sources */,
 				3F7BFE63240B9F940036D53D /* MoneyTableViewCell.swift in Sources */,
 				3BEF967F240A776E009BD4D3 /* AppDelegate.swift in Sources */,
+				3F04F852240CF6D200C32FF7 /* Transaction.swift in Sources */,
 				3F7BFE65240BAA400036D53D /* GroupTableViewCell.swift in Sources */,
 				3F7BFE67240BB49B0036D53D /* GroupTableViewController.swift in Sources */,
 				3BC19710240BD84B00E7723A /* CalendarTableViewCell.swift in Sources */,

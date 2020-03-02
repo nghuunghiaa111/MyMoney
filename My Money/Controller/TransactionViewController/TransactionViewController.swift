@@ -8,10 +8,14 @@
 
 import UIKit
 
-class TransactionViewController: UITableViewController {
+class TransactionViewController: UITableViewController, UITextFieldDelegate {
     
-    let cellIDs = ["MoneyCell","GroupCell","NoteCell","CalenderCell","WalletCell"]
-    let cellController:[UITableViewCell] = [MoneyTableViewCell(),GroupTableViewCell(),NoteTableViewCell(),CalendarTableViewCell(),WalletTableViewCell()]
+    @IBOutlet weak var moneyTextField: UITextField!
+    @IBOutlet weak var groupNameLabel: UILabel!
+    @IBOutlet weak var groupImageView: UIImageView!
+    @IBOutlet weak var walletNameLabel: UILabel!
+    @IBOutlet weak var walletImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,20 +32,37 @@ class TransactionViewController: UITableViewController {
         navigationItem.rightBarButtonItem?.tintColor = .white
         navigationItem.rightBarButtonItem?.isEnabled = false
         
-        //navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        //setup groupImageView
+        groupImageView.layer.cornerRadius = groupImageView.frame.height/2
         
-        //close keyboard
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-//        view.addGestureRecognizer(tap)
+        //setup moneyTextField
+        moneyTextField.attributedPlaceholder = NSAttributedString(string: "0", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        moneyTextField.delegate = self
+        setupCloseKeyboard()
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let textFieldText = textField.text,
+            let rangeOfTextToReplace = Range(range, in: textFieldText) else {
+                return false
+        }
+        let substringToReplace = textFieldText[rangeOfTextToReplace]
+        let count = textFieldText.count - substringToReplace.count + string.count
+        
+        let allowedCharacters = "0123456789,"
+        let allowedCharacterSet = CharacterSet(charactersIn: allowedCharacters)
+        let typedCharacterSet = CharacterSet(charactersIn: string)
+        
+        return count <= 15 && allowedCharacterSet.isSuperset(of: typedCharacterSet)
     }
     
     func setupCloseKeyboard() {
-        let cell = MoneyTableViewCell()
-        let textField = cell.moneyTextField
-        let toolBar = UIToolbar()
-        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissKeyboard))
-        toolBar.setItems([doneButton], animated: true)
-        textField?.inputAccessoryView = toolBar
+        let toolbarDone = UIToolbar.init()
+        toolbarDone.sizeToFit()
+        let barBtnDone = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissKeyboard))
+
+        toolbarDone.items = [barBtnDone] // You can even add cancel button too
+        moneyTextField.inputAccessoryView = toolbarDone
     }
     
     @objc func dismissKeyboard() {
@@ -54,18 +75,5 @@ class TransactionViewController: UITableViewController {
 
     @objc func saveButtonAction() {
         self.dismiss(animated: true, completion: nil)
-    }
-    
-    //tableview protocol
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellIDs.count
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //print(cellIDs[indexPath.row])
     }
 }
