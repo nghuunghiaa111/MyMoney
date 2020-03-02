@@ -24,6 +24,7 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
         groupImageView.image = UIImage.init(named: name)
         groupNameLabel.text = name
         noteLabel.text = DataProvider.transactionBus.readNote()
+        getCurrentDate()
         if name != "" {
             groupImageView.backgroundColor = .clear
             groupNameLabel.textColor = .white
@@ -34,6 +35,11 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
             noteLabel.textColor = .white
         } else {
             noteLabel.text = "Ghi chú"
+        }
+        if moneyTextField.text != "" && groupNameLabel.text != "" {
+            navigationItem.rightBarButtonItem?.isEnabled = true
+        } else {
+            navigationItem.rightBarButtonItem?.isEnabled = false
         }
     }
     
@@ -51,7 +57,7 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Lưu", style: .done, target: self, action: #selector(saveButtonAction))
         navigationItem.rightBarButtonItem?.tintColor = .white
-        navigationItem.rightBarButtonItem?.isEnabled = false
+        
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
@@ -60,7 +66,13 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
         
         //setup moneyTextField
         moneyTextField.attributedPlaceholder = NSAttributedString(string: "0", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        moneyTextField.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged)
         moneyTextField.delegate = self
+        
+        //rightButton
+        
+        
+        
         setupCloseKeyboard()
     }
     
@@ -77,6 +89,15 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
         let typedCharacterSet = CharacterSet(charactersIn: string)
         
         return count <= 15 && allowedCharacterSet.isSuperset(of: typedCharacterSet)
+    }
+    
+    @objc func editingChanged(_ textField: UITextField) {
+        if textField.text != "" && groupNameLabel.text != "Chọn nhóm" {
+            navigationItem.rightBarButtonItem?.isEnabled = true
+        } else {
+            navigationItem.rightBarButtonItem?.isEnabled = false
+        }
+        //textField.text = DataProvider.formatPrice(price: textField.text ?? "0")
     }
     
     func setupCloseKeyboard() {
@@ -100,8 +121,10 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
         if indexPath.row == 3 {
             let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
             let todayButton = UIAlertAction(title: "Ngày hôm nay", style: .default) { (todayButton) in
-                print("Hôm nay")
-                self.dateLabel.text = "Thứ 2, 02 tháng 3 2020"
+                self.getCurrentDate()
+                tableView.reloadData()
+            }
+            let yesterdayButton = UIAlertAction(title: "Ngày hôm qua", style: .default) { (yesterdayButton) in
                 tableView.reloadData()
             }
             let adjustButton = UIAlertAction(title: "Tuỳ chỉnh", style: .default) { (adjustButton) in
@@ -109,8 +132,11 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
                 let vc = self.storyboard?.instantiateViewController(identifier: "AdjustDateVC") as! AdjustDateViewController
                 self.navigationController?.pushViewController(vc, animated: true)
             }
-            let cancelButton = UIAlertAction(title: "Huỷ", style: .cancel, handler: nil)
+            let cancelButton = UIAlertAction(title: "Huỷ", style: .cancel) { (cancelButton) in
+                tableView.reloadData()
+            }
             alert.addAction(todayButton)
+            alert.addAction(yesterdayButton)
             alert.addAction(adjustButton)
             alert.addAction(cancelButton)
             present(alert, animated: true)
@@ -122,11 +148,21 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
     }
     
     @objc func cancelButtonAction() {
+        DataProvider.transactionBus.chooseGroupType(nameGroup: "")
         self.dismiss(animated: true, completion: nil)
     }
 
     @objc func saveButtonAction() {
+        DataProvider.transactionBus.chooseGroupType(nameGroup: "")
         self.dismiss(animated: true, completion: nil)
     }
-
+    
+    func getCurrentDate() {
+        let today = Date()
+        let weekday = Calendar.current.component(.weekday, from: today)
+        let month = Calendar.current.component(.month, from: today)
+        let date = Calendar.current.component(.day, from: today)
+        let year = Calendar.current.component(.year, from: today)
+        dateLabel.text = "\(DataProvider.changeFormatWeekday(weekday: Calendar.current.weekdaySymbols[weekday-1])), \(date) tháng \(month) \(year)"
+    }
 }

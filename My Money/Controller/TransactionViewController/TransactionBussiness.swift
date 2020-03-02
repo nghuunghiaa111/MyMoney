@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SQLite3
 
 public class TransactionBussiness {
     private var name = ""
@@ -26,5 +27,16 @@ public class TransactionBussiness {
     
     func readNote() -> String {
         return note
+    }
+    
+    //database
+    static func createDatabase() {
+        var dbCommand: String = ""
+        
+        //create table transaction
+        dbCommand = "CREATE TABLE Transaction(money INT, group NVARCHAR(30), note NVARCHAR(100), date NVARCHAR(30), walletType NVARCHAR(30));"
+        
+        SqlDataProvider.updateDatabase(dbCommand)
+        print("Tao bang thanh cong")
     }
 }
