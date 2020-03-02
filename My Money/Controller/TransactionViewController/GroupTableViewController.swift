@@ -69,10 +69,8 @@ class GroupTableViewController: UIViewController, UITableViewDelegate, UITableVi
         //let vc = storyboard?.instantiateViewController(withIdentifier: "AddTransactionVC") as! TransactionViewController
         if segmentControl.selectedSegmentIndex == 0 {
             DataProvider.transactionBus.chooseGroupType(nameGroup: groupPaidTypes[indexPath.row])
-            print(groupPaidTypes[indexPath.row])
         } else {
             DataProvider.transactionBus.chooseGroupType(nameGroup: groupReceiptTypes[indexPath.row])
-            print(groupReceiptTypes[indexPath.row])
         }
         
         navigationController?.popViewController(animated: true)

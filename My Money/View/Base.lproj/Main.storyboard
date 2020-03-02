@@ -267,6 +267,7 @@
                         <outlet property="groupImageView" destination="IuA-Ja-vsC" id="kBM-o4-NhD"/>
                         <outlet property="groupNameLabel" destination="3vb-UM-Ix1" id="Ud5-ur-J8c"/>
                         <outlet property="moneyTextField" destination="5ZA-T9-5Ry" id="r7y-PG-XBk"/>
+                        <outlet property="noteLabel" destination="Zna-Mh-gqr" id="R80-6j-lfY"/>
                         <outlet property="walletImageView" destination="8zX-2E-E5n" id="K4Q-x0-1iu"/>
                         <outlet property="walletNameLabel" destination="jNZ-G9-JDF" id="PrV-0L-BEY"/>
                     </connections>
@@ -365,21 +366,39 @@
             </objects>
             <point key="canvasLocation" x="-514.39999999999998" y="3115.5922038980511"/>
         </scene>
-        <!--View Controller-->
+        <!--Ghi chú-->
         <scene sceneID="DeL-TP-TAi">
             <objects>
-                <viewController id="3gU-AX-y9C" sceneMemberID="viewController">
+                <viewController id="3gU-AX-y9C" customClass="NoteViewController" customModule="My_Money" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dKu-dv-qXb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWc-CX-ygo">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert" returnKeyType="done"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="CWc-CX-ygo" secondAttribute="bottom" id="6OW-L0-65w"/>
+                            <constraint firstItem="CWc-CX-ygo" firstAttribute="trailing" secondItem="8Im-31-mfg" secondAttribute="trailing" id="OFY-c9-mog"/>
+                            <constraint firstItem="CWc-CX-ygo" firstAttribute="top" secondItem="8Im-31-mfg" secondAttribute="top" id="VLn-Hy-o5H"/>
+                            <constraint firstItem="CWc-CX-ygo" firstAttribute="leading" secondItem="8Im-31-mfg" secondAttribute="leading" id="pq1-q9-kwg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8Im-31-mfg"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9SS-HI-jh2"/>
+                    <navigationItem key="navigationItem" title="Ghi chú" id="9SS-HI-jh2"/>
+                    <connections>
+                        <outlet property="noteTextView" destination="CWc-CX-ygo" id="zJx-zD-uWc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WYb-nT-xcf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="3116"/>
+            <point key="canvasLocation" x="173.59999999999999" y="3115.5922038980511"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bCC-DQ-TIB">
@@ -592,14 +611,14 @@
         <image name="calendar" width="40" height="40"/>
         <image name="chart" width="25" height="25"/>
         <image name="chart_filled" width="25" height="25"/>
-        <image name="dong" width="64" height="64"/>
+        <image name="dong" width="128" height="128"/>
         <image name="home" width="25" height="25"/>
         <image name="home_filled" width="25" height="25"/>
         <image name="menu" width="25" height="25"/>
         <image name="menu_filled" width="25" height="25"/>
         <image name="note" width="40" height="40"/>
         <image name="wallet" width="25" height="25"/>
-        <image name="wallet_color" width="40" height="40"/>
+        <image name="wallet_color" width="100" height="100"/>
         <image name="wallet_filled" width="25" height="25"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

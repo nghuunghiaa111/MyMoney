@@ -13,9 +13,6 @@
 		3B45DBFB240A7E2F0038FCC3 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45DBFA240A7E2F0038FCC3 /* TransactionViewController.swift */; };
 		3B45DBFD240A802F0038FCC3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45DBFC240A802F0038FCC3 /* MainViewController.swift */; };
 		3B45DBFF240AE8190038FCC3 /* OverallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45DBFE240AE8190038FCC3 /* OverallViewController.swift */; };
-		3BC1970C240BD82800E7723A /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1970B240BD82800E7723A /* NoteTableViewCell.swift */; };
-		3BC1970E240BD83700E7723A /* WalletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1970D240BD83700E7723A /* WalletTableViewCell.swift */; };
-		3BC19710240BD84B00E7723A /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1970F240BD84B00E7723A /* CalendarTableViewCell.swift */; };
 		3BC19712240C12C500E7723A /* GroupSelectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC19711240C12C500E7723A /* GroupSelectTableViewCell.swift */; };
 		3BEF967F240A776E009BD4D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF967E240A776E009BD4D3 /* AppDelegate.swift */; };
 		3BEF9681240A776E009BD4D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF9680240A776E009BD4D3 /* SceneDelegate.swift */; };
@@ -26,8 +23,7 @@
 		3F04F852240CF6D200C32FF7 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04F851240CF6D200C32FF7 /* Transaction.swift */; };
 		3F04F854240CFB3300C32FF7 /* TransactionBussiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04F853240CFB3300C32FF7 /* TransactionBussiness.swift */; };
 		3F04F856240D07CD00C32FF7 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04F855240D07CD00C32FF7 /* DataProvider.swift */; };
-		3F7BFE63240B9F940036D53D /* MoneyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BFE62240B9F940036D53D /* MoneyTableViewCell.swift */; };
-		3F7BFE65240BAA400036D53D /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BFE64240BAA400036D53D /* GroupTableViewCell.swift */; };
+		3F04F858240D146900C32FF7 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04F857240D146900C32FF7 /* NoteViewController.swift */; };
 		3F7BFE67240BB49B0036D53D /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BFE66240BB49B0036D53D /* GroupTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,9 +34,6 @@
 		3B45DBFA240A7E2F0038FCC3 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		3B45DBFC240A802F0038FCC3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3B45DBFE240AE8190038FCC3 /* OverallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallViewController.swift; sourceTree = "<group>"; };
-		3BC1970B240BD82800E7723A /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
-		3BC1970D240BD83700E7723A /* WalletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTableViewCell.swift; sourceTree = "<group>"; };
-		3BC1970F240BD84B00E7723A /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		3BC19711240C12C500E7723A /* GroupSelectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSelectTableViewCell.swift; sourceTree = "<group>"; };
 		3BEF967B240A776E009BD4D3 /* My Money.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Money.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEF967E240A776E009BD4D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,8 +46,7 @@
 		3F04F851240CF6D200C32FF7 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Transaction.swift; path = "My Money/Controller/TransactionViewController/Transaction.swift"; sourceTree = SOURCE_ROOT; };
 		3F04F853240CFB3300C32FF7 /* TransactionBussiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionBussiness.swift; path = "My Money/Controller/TransactionViewController/TransactionBussiness.swift"; sourceTree = SOURCE_ROOT; };
 		3F04F855240D07CD00C32FF7 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataProvider.swift; path = "My Money/Controller/TransactionViewController/DataProvider.swift"; sourceTree = SOURCE_ROOT; };
-		3F7BFE62240B9F940036D53D /* MoneyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTableViewCell.swift; sourceTree = "<group>"; };
-		3F7BFE64240BAA400036D53D /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		3F04F857240D146900C32FF7 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		3F7BFE66240BB49B0036D53D /* GroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,14 +143,10 @@
 		3FD64709240B9779005ACE6A /* TransactionViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3F7BFE62240B9F940036D53D /* MoneyTableViewCell.swift */,
-				3F7BFE64240BAA400036D53D /* GroupTableViewCell.swift */,
 				3F7BFE66240BB49B0036D53D /* GroupTableViewController.swift */,
-				3BC1970B240BD82800E7723A /* NoteTableViewCell.swift */,
-				3BC1970D240BD83700E7723A /* WalletTableViewCell.swift */,
-				3BC1970F240BD84B00E7723A /* CalendarTableViewCell.swift */,
 				3B45DBFA240A7E2F0038FCC3 /* TransactionViewController.swift */,
 				3BC19711240C12C500E7723A /* GroupSelectTableViewCell.swift */,
+				3F04F857240D146900C32FF7 /* NoteViewController.swift */,
 			);
 			path = TransactionViewController;
 			sourceTree = "<group>";
@@ -234,24 +222,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BC1970E240BD83700E7723A /* WalletTableViewCell.swift in Sources */,
 				3BEF9683240A776E009BD4D3 /* WalletViewController.swift in Sources */,
 				3F04F854240CFB3300C32FF7 /* TransactionBussiness.swift in Sources */,
-				3BC1970C240BD82800E7723A /* NoteTableViewCell.swift in Sources */,
 				3B1274D4240B758200315649 /* ChartViewController.swift in Sources */,
 				3F04F856240D07CD00C32FF7 /* DataProvider.swift in Sources */,
-				3F7BFE63240B9F940036D53D /* MoneyTableViewCell.swift in Sources */,
 				3BEF967F240A776E009BD4D3 /* AppDelegate.swift in Sources */,
 				3F04F852240CF6D200C32FF7 /* Transaction.swift in Sources */,
-				3F7BFE65240BAA400036D53D /* GroupTableViewCell.swift in Sources */,
 				3F7BFE67240BB49B0036D53D /* GroupTableViewController.swift in Sources */,
-				3BC19710240BD84B00E7723A /* CalendarTableViewCell.swift in Sources */,
 				3BC19712240C12C500E7723A /* GroupSelectTableViewCell.swift in Sources */,
 				3B45DBFB240A7E2F0038FCC3 /* TransactionViewController.swift in Sources */,
 				3B1274D6240B758E00315649 /* ExtendViewController.swift in Sources */,
 				3BEF9681240A776E009BD4D3 /* SceneDelegate.swift in Sources */,
 				3B45DBFD240A802F0038FCC3 /* MainViewController.swift in Sources */,
 				3B1274D9240B760700315649 /* Extension.swift in Sources */,
+				3F04F858240D146900C32FF7 /* NoteViewController.swift in Sources */,
 				3B45DBFF240AE8190038FCC3 /* OverallViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

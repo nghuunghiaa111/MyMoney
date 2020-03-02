@@ -15,17 +15,24 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var groupImageView: UIImageView!
     @IBOutlet weak var walletNameLabel: UILabel!
     @IBOutlet weak var walletImageView: UIImageView!
+    @IBOutlet weak var noteLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         let name = DataProvider.transactionBus.changeNameGroupType()
         groupImageView.image = UIImage.init(named: name)
         groupNameLabel.text = name
+        noteLabel.text = DataProvider.transactionBus.readNote()
         if name != "" {
             groupImageView.backgroundColor = .clear
             groupNameLabel.textColor = .white
         } else {
             groupNameLabel.text = "Chọn nhóm"
+        }
+        if DataProvider.transactionBus.readNote() != "" {
+            noteLabel.textColor = .white
+        } else {
+            noteLabel.text = "Ghi chú"
         }
     }
     
@@ -44,6 +51,8 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Lưu", style: .done, target: self, action: #selector(saveButtonAction))
         navigationItem.rightBarButtonItem?.tintColor = .white
         navigationItem.rightBarButtonItem?.isEnabled = false
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
         //setup groupImageView
         groupImageView.layer.cornerRadius = groupImageView.frame.height/2

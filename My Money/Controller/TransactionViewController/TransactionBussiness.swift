@@ -10,6 +10,7 @@ import Foundation
 
 public class TransactionBussiness {
     private var name = ""
+    private var note = ""
     
     func changeNameGroupType() -> String {
         return name
@@ -17,5 +18,13 @@ public class TransactionBussiness {
     
     func chooseGroupType(nameGroup: String) {
         name = nameGroup
+    }
+    
+    func writeNote(note: String) {
+        self.note = note
+    }
+    
+    func readNote() -> String {
+        return note
     }
 }
