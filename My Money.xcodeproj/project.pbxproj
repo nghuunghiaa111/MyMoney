@@ -24,6 +24,7 @@
 		3F04F854240CFB3300C32FF7 /* TransactionBussiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04F853240CFB3300C32FF7 /* TransactionBussiness.swift */; };
 		3F04F856240D07CD00C32FF7 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04F855240D07CD00C32FF7 /* DataProvider.swift */; };
 		3F04F858240D146900C32FF7 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04F857240D146900C32FF7 /* NoteViewController.swift */; };
+		3F04F85A240D201B00C32FF7 /* AdjustDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04F859240D201B00C32FF7 /* AdjustDateViewController.swift */; };
 		3F7BFE67240BB49B0036D53D /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BFE66240BB49B0036D53D /* GroupTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		3F04F853240CFB3300C32FF7 /* TransactionBussiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionBussiness.swift; path = "My Money/Controller/TransactionViewController/TransactionBussiness.swift"; sourceTree = SOURCE_ROOT; };
 		3F04F855240D07CD00C32FF7 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataProvider.swift; path = "My Money/Controller/TransactionViewController/DataProvider.swift"; sourceTree = SOURCE_ROOT; };
 		3F04F857240D146900C32FF7 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		3F04F859240D201B00C32FF7 /* AdjustDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustDateViewController.swift; sourceTree = "<group>"; };
 		3F7BFE66240BB49B0036D53D /* GroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +149,7 @@
 				3B45DBFA240A7E2F0038FCC3 /* TransactionViewController.swift */,
 				3BC19711240C12C500E7723A /* GroupSelectTableViewCell.swift */,
 				3F04F857240D146900C32FF7 /* NoteViewController.swift */,
+				3F04F859240D201B00C32FF7 /* AdjustDateViewController.swift */,
 			);
 			path = TransactionViewController;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BEF9683240A776E009BD4D3 /* WalletViewController.swift in Sources */,
+				3F04F85A240D201B00C32FF7 /* AdjustDateViewController.swift in Sources */,
 				3F04F854240CFB3300C32FF7 /* TransactionBussiness.swift in Sources */,
 				3B1274D4240B758200315649 /* ChartViewController.swift in Sources */,
 				3F04F856240D07CD00C32FF7 /* DataProvider.swift in Sources */,

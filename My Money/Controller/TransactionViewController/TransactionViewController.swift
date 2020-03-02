@@ -16,6 +16,7 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var walletNameLabel: UILabel!
     @IBOutlet weak var walletImageView: UIImageView!
     @IBOutlet weak var noteLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -89,6 +90,31 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         view.endEditing(true)
+        if indexPath.row == 2 {
+            if noteLabel.text != "Ghi chú" {
+                DataProvider.transactionBus.writeNote(note: noteLabel.text ?? "")
+            } else {
+                DataProvider.transactionBus.writeNote(note: "")
+            }
+        }
+        if indexPath.row == 3 {
+            let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+            let todayButton = UIAlertAction(title: "Ngày hôm nay", style: .default) { (todayButton) in
+                print("Hôm nay")
+                self.dateLabel.text = "Thứ 2, 02 tháng 3 2020"
+                tableView.reloadData()
+            }
+            let adjustButton = UIAlertAction(title: "Tuỳ chỉnh", style: .default) { (adjustButton) in
+                print("Tuỳ chỉnh")
+                let vc = self.storyboard?.instantiateViewController(identifier: "AdjustDateVC") as! AdjustDateViewController
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            let cancelButton = UIAlertAction(title: "Huỷ", style: .cancel, handler: nil)
+            alert.addAction(todayButton)
+            alert.addAction(adjustButton)
+            alert.addAction(cancelButton)
+            present(alert, animated: true)
+        }
     }
     
     @objc func dismissKeyboard() {
@@ -102,4 +128,5 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
     @objc func saveButtonAction() {
         self.dismiss(animated: true, completion: nil)
     }
+
 }

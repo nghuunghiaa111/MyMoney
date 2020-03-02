@@ -174,7 +174,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="241" id="IQM-wk-EXN"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -190,7 +190,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                         <connections>
-                                            <segue destination="3gU-AX-y9C" kind="push" id="VlH-Pa-g7v"/>
+                                            <segue destination="3gU-AX-y9C" kind="show" id="WPB-W0-OGL"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CalenderCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DateCell" rowHeight="46" id="jEy-y6-AwW">
@@ -207,17 +207,24 @@
                                                         <constraint firstAttribute="width" constant="40" id="lTX-dB-l5w"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thứ 3, 03 tháng 3 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iht-ng-CHk">
+                                                    <rect key="frame" x="89" y="11" width="251" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="iLo-8h-4vN" firstAttribute="leading" secondItem="uL4-Rx-PvH" secondAttribute="leading" constant="36" id="6Ev-06-fBU"/>
+                                                <constraint firstAttribute="bottom" secondItem="iht-ng-CHk" secondAttribute="bottom" constant="14" id="AEk-zc-MoI"/>
                                                 <constraint firstAttribute="bottom" secondItem="iLo-8h-4vN" secondAttribute="bottom" constant="3" id="E2M-Yq-xB5"/>
+                                                <constraint firstItem="iht-ng-CHk" firstAttribute="top" secondItem="uL4-Rx-PvH" secondAttribute="top" constant="11" id="b4X-4i-DzP"/>
                                                 <constraint firstItem="iLo-8h-4vN" firstAttribute="top" secondItem="uL4-Rx-PvH" secondAttribute="top" constant="3" id="jzp-L5-LBW"/>
+                                                <constraint firstAttribute="trailing" secondItem="iht-ng-CHk" secondAttribute="trailing" constant="8" id="lOd-hx-117"/>
+                                                <constraint firstItem="iht-ng-CHk" firstAttribute="leading" secondItem="iLo-8h-4vN" secondAttribute="trailing" constant="13" id="zRv-GW-LoY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                        <connections>
-                                            <segue destination="POd-an-1Mb" kind="push" id="hFn-jR-Ckn"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="WalletCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="WalletCell" rowHeight="46" id="GvU-eh-WXd">
                                         <rect key="frame" x="0.0" y="241" width="375" height="46"/>
@@ -234,8 +241,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiền mặt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNZ-G9-JDF">
-                                                    <rect key="frame" x="88" y="2" width="70" height="43"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <rect key="frame" x="88" y="2" width="68.5" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -264,6 +271,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Thêm giao dịch" id="CUl-Lx-M1t"/>
                     <connections>
+                        <outlet property="dateLabel" destination="iht-ng-CHk" id="xSl-Gm-NkV"/>
                         <outlet property="groupImageView" destination="IuA-Ja-vsC" id="kBM-o4-NhD"/>
                         <outlet property="groupNameLabel" destination="3vb-UM-Ix1" id="Ud5-ur-J8c"/>
                         <outlet property="moneyTextField" destination="5ZA-T9-5Ry" id="r7y-PG-XBk"/>
@@ -369,7 +377,7 @@
         <!--Ghi chú-->
         <scene sceneID="DeL-TP-TAi">
             <objects>
-                <viewController id="3gU-AX-y9C" customClass="NoteViewController" customModule="My_Money" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoteViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3gU-AX-y9C" customClass="NoteViewController" customModule="My_Money" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dKu-dv-qXb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,10 +408,10 @@
             </objects>
             <point key="canvasLocation" x="173.59999999999999" y="3115.5922038980511"/>
         </scene>
-        <!--View Controller-->
+        <!--Adjust Date View Controller-->
         <scene sceneID="bCC-DQ-TIB">
             <objects>
-                <viewController id="POd-an-1Mb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdjustDateVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="POd-an-1Mb" customClass="AdjustDateViewController" customModule="My_Money" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eyU-Qi-gPm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

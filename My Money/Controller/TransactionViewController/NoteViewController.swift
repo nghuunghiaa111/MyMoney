@@ -17,6 +17,9 @@ class NoteViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
+        
+        //textView
+        noteTextView.text = DataProvider.transactionBus.readNote()
     }
     
     @objc func doneButtonAction() {
