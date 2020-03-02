@@ -16,9 +16,22 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var walletNameLabel: UILabel!
     @IBOutlet weak var walletImageView: UIImageView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        let name = DataProvider.transactionBus.changeNameGroupType()
+        groupImageView.image = UIImage.init(named: name)
+        groupNameLabel.text = name
+        if name != "" {
+            groupImageView.backgroundColor = .clear
+            groupNameLabel.textColor = .white
+        } else {
+            groupNameLabel.text = "Chọn nhóm"
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //print("Hello Mother Fucker")
         // Do any additional setup after loading the view.
         
         setupNavigationBar()
@@ -63,6 +76,10 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
 
         toolbarDone.items = [barBtnDone] // You can even add cancel button too
         moneyTextField.inputAccessoryView = toolbarDone
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        view.endEditing(true)
     }
     
     @objc func dismissKeyboard() {
