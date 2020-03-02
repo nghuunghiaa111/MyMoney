@@ -9,7 +9,9 @@
 import UIKit
 
 class TransactionViewController: UITableViewController {
-
+    
+    let cellIDs = ["MoneyCell","GroupCell","NoteCell","CalenderCell","WalletCell"]
+    let cellController:[UITableViewCell] = [MoneyTableViewCell(),GroupTableViewCell(),NoteTableViewCell(),CalendarTableViewCell(),WalletTableViewCell()]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +27,8 @@ class TransactionViewController: UITableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Lưu", style: .done, target: self, action: #selector(saveButtonAction))
         navigationItem.rightBarButtonItem?.tintColor = .white
         navigationItem.rightBarButtonItem?.isEnabled = false
+        
+        //navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
         //close keyboard
 //        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -50,5 +54,18 @@ class TransactionViewController: UITableViewController {
 
     @objc func saveButtonAction() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    //tableview protocol
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cellIDs.count
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //print(cellIDs[indexPath.row])
     }
 }
