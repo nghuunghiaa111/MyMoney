@@ -14,7 +14,7 @@ class SqlDataProvider: NSObject {
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .allDomainsMask).first!
     
     //Lay duong dan den db
-    static let DBURL = DocumentsDirectory.appendingPathComponent("Transaction.db")
+    static let DBURL = DocumentsDirectory.appendingPathComponent("MoneyLover.db")
     
     //Mo ket noi den database can lam viec
     static func openDatabase() -> OpaquePointer {
@@ -47,5 +47,10 @@ class SqlDataProvider: NSObject {
         
         //Dong ket noi
         sqlite3_close(db)
+    }
+    
+    static func insertTransaction(money: Int, group: String, note: String, date: String, walletType: String) {
+        let strInsert = "insert into Trans(money, groupType, note, date, walletType) values (\(money),'\(group)','\(note)','\(date)','\(walletType)')"
+        updateDatabase(strInsert)
     }
 }

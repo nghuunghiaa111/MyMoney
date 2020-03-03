@@ -9,6 +9,7 @@
 import Foundation
 
 class Transaction {
+    var transactionID = 0
     var money = 0
     var group = ""
     var note = ""

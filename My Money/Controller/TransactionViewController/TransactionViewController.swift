@@ -10,6 +10,8 @@ import UIKit
 
 class TransactionViewController: UITableViewController, UITextFieldDelegate {
     
+    var money:Int = 0
+    
     @IBOutlet weak var moneyTextField: UITextField!
     @IBOutlet weak var groupNameLabel: UILabel!
     @IBOutlet weak var groupImageView: UIImageView!
@@ -69,7 +71,7 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
         moneyTextField.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged)
         moneyTextField.delegate = self
         
-        //rightButton
+        //textfield
         
         
         
@@ -87,6 +89,8 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
         let allowedCharacters = "0123456789,"
         let allowedCharacterSet = CharacterSet(charactersIn: allowedCharacters)
         let typedCharacterSet = CharacterSet(charactersIn: string)
+        
+        //format
         
         return count <= 15 && allowedCharacterSet.isSuperset(of: typedCharacterSet)
     }
@@ -153,6 +157,8 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
     }
 
     @objc func saveButtonAction() {
+        let money = Int(moneyTextField.text ?? "0") ?? 0
+        SqlDataProvider.insertTransaction(money: money, group: groupNameLabel.text!, note: noteLabel.text!, date: "Thứ 4", walletType: walletNameLabel.text!)
         DataProvider.transactionBus.chooseGroupType(nameGroup: "")
         self.dismiss(animated: true, completion: nil)
     }
@@ -165,4 +171,5 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
         let year = Calendar.current.component(.year, from: today)
         dateLabel.text = "\(DataProvider.changeFormatWeekday(weekday: Calendar.current.weekdaySymbols[weekday-1])), \(date) tháng \(month) \(year)"
     }
+    
 }
