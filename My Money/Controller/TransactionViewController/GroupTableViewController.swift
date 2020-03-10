@@ -14,7 +14,6 @@ class GroupTableViewController: UIViewController, UITableViewDelegate, UITableVi
     let groupReceiptTypes = ["Thưởng","Lương","Được tặng","Bán đồ","Khoản thu khác"]
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
-    
     @IBOutlet weak var tableView: UITableView!
     @IBAction func segmentControlAction(_ sender: Any) {
         if segmentControl.selectedSegmentIndex == 0 {

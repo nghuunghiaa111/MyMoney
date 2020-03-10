@@ -26,7 +26,11 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
         groupImageView.image = UIImage.init(named: name)
         groupNameLabel.text = name
         noteLabel.text = DataProvider.transactionBus.readNote()
-        getCurrentDate()
+        if DataProvider.transactionBus.writeDate() == "" {
+            dateLabel.text = getCurrentDate()
+        } else {
+            dateLabel.text = DataProvider.transactionBus.writeDate()
+        }
         if name != "" {
             groupImageView.backgroundColor = .clear
             groupNameLabel.textColor = .white
@@ -125,22 +129,19 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
         if indexPath.row == 3 {
             let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
             let todayButton = UIAlertAction(title: "Ngày hôm nay", style: .default) { (todayButton) in
-                self.getCurrentDate()
-                tableView.reloadData()
-            }
-            let yesterdayButton = UIAlertAction(title: "Ngày hôm qua", style: .default) { (yesterdayButton) in
+                self.dateLabel.text = self.getCurrentDate()
                 tableView.reloadData()
             }
             let adjustButton = UIAlertAction(title: "Tuỳ chỉnh", style: .default) { (adjustButton) in
-                print("Tuỳ chỉnh")
                 let vc = self.storyboard?.instantiateViewController(identifier: "AdjustDateVC") as! AdjustDateViewController
                 self.navigationController?.pushViewController(vc, animated: true)
             }
             let cancelButton = UIAlertAction(title: "Huỷ", style: .cancel) { (cancelButton) in
                 tableView.reloadData()
             }
+            alert.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = .darkGray
+            alert.view.tintColor = .black
             alert.addAction(todayButton)
-            alert.addAction(yesterdayButton)
             alert.addAction(adjustButton)
             alert.addAction(cancelButton)
             present(alert, animated: true)
@@ -152,24 +153,34 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
     }
     
     @objc func cancelButtonAction() {
-        DataProvider.transactionBus.chooseGroupType(nameGroup: "")
+        resetOption()
         self.dismiss(animated: true, completion: nil)
     }
 
     @objc func saveButtonAction() {
         let money = Int(moneyTextField.text ?? "0") ?? 0
-        SqlDataProvider.insertTransaction(money: money, group: groupNameLabel.text!, note: noteLabel.text!, date: "Thứ 4", walletType: walletNameLabel.text!)
-        DataProvider.transactionBus.chooseGroupType(nameGroup: "")
+        var note = ""
+        if noteLabel.text != "Ghi chú" {
+            note = noteLabel.text!
+        }
+        SqlDataProvider.insertTransaction(money: money, group: groupNameLabel.text!, note: note, date: dateLabel.text!, walletType: walletNameLabel.text!)
+        resetOption()
         self.dismiss(animated: true, completion: nil)
     }
     
-    func getCurrentDate() {
+    func getCurrentDate() -> String {
         let today = Date()
         let weekday = Calendar.current.component(.weekday, from: today)
         let month = Calendar.current.component(.month, from: today)
         let date = Calendar.current.component(.day, from: today)
         let year = Calendar.current.component(.year, from: today)
-        dateLabel.text = "\(DataProvider.changeFormatWeekday(weekday: Calendar.current.weekdaySymbols[weekday-1])), \(date) tháng \(month) \(year)"
+        return "\(DataProvider.changeFormatWeekday(weekday: Calendar.current.weekdaySymbols[weekday-1])), \(date) tháng \(month) \(year)"
+    }
+    
+    func resetOption() {
+        DataProvider.transactionBus.chooseGroupType(nameGroup: "")
+        DataProvider.transactionBus.readDate(date: "")
+        DataProvider.transactionBus.writeNote(note: "")
     }
     
 }

@@ -16,18 +16,25 @@ class OverallViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        lstTranaction = TransactionBussiness.getListTransaction()
-        moneyLabel.text = "\(lstTranaction[1].money)"
+        lstTranaction = DataProvider.transactionBus.getListTransaction()
+        moneyLabel.text = String(TransactionBussiness.getTotalAmout())
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view
-        lstTranaction = TransactionBussiness.getListTransaction()
+        lstTranaction = DataProvider.transactionBus.getListTransaction()
         
         setupNavigationBar()
-        print(lstTranaction.count)
         
+        let touchGesture = UITapGestureRecognizer(target: self, action: #selector(touchAction))
+        moneyLabel.addGestureRecognizer(touchGesture)
+    }
+    
+    @objc func touchAction() {
+        let vc = storyboard?.instantiateViewController(identifier: "BalanceVC") as! BalanceViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

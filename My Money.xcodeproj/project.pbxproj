@@ -3,21 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B06B0032414F11B00E5AD4E /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06B0022414F11B00E5AD4E /* BalanceViewController.swift */; };
+		3B06B00524150FF200E5AD4E /* WalletTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06B00424150FF200E5AD4E /* WalletTableViewController.swift */; };
 		3B07A2FC240D7A520081891E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B07A2FB240D7A520081891E /* libsqlite3.tbd */; };
 		3B07A2FF240D7AE50081891E /* MyMoneySQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B07A2FE240D7AE50081891E /* MyMoneySQL.m */; };
 		3B07A301240D7B300081891E /* SqlDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07A300240D7B300081891E /* SqlDataProvider.swift */; };
 		3B1274D4240B758200315649 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1274D3240B758200315649 /* ChartViewController.swift */; };
 		3B1274D6240B758E00315649 /* ExtendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1274D5240B758E00315649 /* ExtendViewController.swift */; };
 		3B1274D9240B760700315649 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1274D8240B760700315649 /* Extension.swift */; };
+		3B19745224163B36006F6C22 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19745124163B36006F6C22 /* TransactionTableViewCell.swift */; };
+		3B1974542416BF1E006F6C22 /* TransDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1974532416BF1E006F6C22 /* TransDetailTableViewController.swift */; };
 		3B45DBFB240A7E2F0038FCC3 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45DBFA240A7E2F0038FCC3 /* TransactionViewController.swift */; };
 		3B45DBFD240A802F0038FCC3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45DBFC240A802F0038FCC3 /* MainViewController.swift */; };
 		3B45DBFF240AE8190038FCC3 /* OverallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45DBFE240AE8190038FCC3 /* OverallViewController.swift */; };
 		3B703C44240EF05000ADBDB1 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B703C43240EF05000ADBDB1 /* Wallet.swift */; };
 		3BC19712240C12C500E7723A /* GroupSelectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC19711240C12C500E7723A /* GroupSelectTableViewCell.swift */; };
+		3BC19DCD24152FF000B5F21C /* WalletDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC19DCC24152FF000B5F21C /* WalletDetailViewController.swift */; };
 		3BEF967F240A776E009BD4D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF967E240A776E009BD4D3 /* AppDelegate.swift */; };
 		3BEF9681240A776E009BD4D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF9680240A776E009BD4D3 /* SceneDelegate.swift */; };
 		3BEF9683240A776E009BD4D3 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF9682240A776E009BD4D3 /* WalletViewController.swift */; };
@@ -30,9 +35,12 @@
 		3F04F858240D146900C32FF7 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04F857240D146900C32FF7 /* NoteViewController.swift */; };
 		3F04F85A240D201B00C32FF7 /* AdjustDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04F859240D201B00C32FF7 /* AdjustDateViewController.swift */; };
 		3F7BFE67240BB49B0036D53D /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BFE66240BB49B0036D53D /* GroupTableViewController.swift */; };
+		B78E221F47C72720B56DA036 /* Pods_My_Money.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A64B2EB5D946DFD6CBB13468 /* Pods_My_Money.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B06B0022414F11B00E5AD4E /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
+		3B06B00424150FF200E5AD4E /* WalletTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTableViewController.swift; sourceTree = "<group>"; };
 		3B07A2FB240D7A520081891E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		3B07A2FD240D7AE50081891E /* My Money-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My Money-Bridging-Header.h"; sourceTree = "<group>"; };
 		3B07A2FE240D7AE50081891E /* MyMoneySQL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyMoneySQL.m; sourceTree = "<group>"; };
@@ -40,11 +48,14 @@
 		3B1274D3240B758200315649 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		3B1274D5240B758E00315649 /* ExtendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendViewController.swift; sourceTree = "<group>"; };
 		3B1274D8240B760700315649 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		3B19745124163B36006F6C22 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionTableViewCell.swift; path = "My Money/Controller/TransactionTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		3B1974532416BF1E006F6C22 /* TransDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransDetailTableViewController.swift; sourceTree = "<group>"; };
 		3B45DBFA240A7E2F0038FCC3 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		3B45DBFC240A802F0038FCC3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3B45DBFE240AE8190038FCC3 /* OverallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallViewController.swift; sourceTree = "<group>"; };
 		3B703C43240EF05000ADBDB1 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		3BC19711240C12C500E7723A /* GroupSelectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSelectTableViewCell.swift; sourceTree = "<group>"; };
+		3BC19DCC24152FF000B5F21C /* WalletDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WalletDetailViewController.swift; path = "My Money/Controller/WalletDetailViewController.swift"; sourceTree = SOURCE_ROOT; };
 		3BEF967B240A776E009BD4D3 /* My Money.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Money.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEF967E240A776E009BD4D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEF9680240A776E009BD4D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +70,9 @@
 		3F04F857240D146900C32FF7 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		3F04F859240D201B00C32FF7 /* AdjustDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustDateViewController.swift; sourceTree = "<group>"; };
 		3F7BFE66240BB49B0036D53D /* GroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
+		A134D2637741E55BEFD0E6FF /* Pods-My Money.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Money.debug.xcconfig"; path = "Target Support Files/Pods-My Money/Pods-My Money.debug.xcconfig"; sourceTree = "<group>"; };
+		A64B2EB5D946DFD6CBB13468 /* Pods_My_Money.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_Money.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D386CB9EEE18F5E3266CC557 /* Pods-My Money.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Money.release.xcconfig"; path = "Target Support Files/Pods-My Money/Pods-My Money.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,16 +81,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B07A2FC240D7A520081891E /* libsqlite3.tbd in Frameworks */,
+				B78E221F47C72720B56DA036 /* Pods_My_Money.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CBC6011F709BA9A63FA7CC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A134D2637741E55BEFD0E6FF /* Pods-My Money.debug.xcconfig */,
+				D386CB9EEE18F5E3266CC557 /* Pods-My Money.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3B07A2FA240D7A510081891E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				3B07A2FB240D7A520081891E /* libsqlite3.tbd */,
+				A64B2EB5D946DFD6CBB13468 /* Pods_My_Money.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -85,11 +110,16 @@
 			isa = PBXGroup;
 			children = (
 				3FD64709240B9779005ACE6A /* TransactionViewController */,
+				3B06B00424150FF200E5AD4E /* WalletTableViewController.swift */,
+				3B19745124163B36006F6C22 /* TransactionTableViewCell.swift */,
 				3BEF9682240A776E009BD4D3 /* WalletViewController.swift */,
 				3B45DBFE240AE8190038FCC3 /* OverallViewController.swift */,
+				3BC19DCC24152FF000B5F21C /* WalletDetailViewController.swift */,
 				3B45DBFC240A802F0038FCC3 /* MainViewController.swift */,
 				3B1274D3240B758200315649 /* ChartViewController.swift */,
+				3B1974532416BF1E006F6C22 /* TransDetailTableViewController.swift */,
 				3B1274D5240B758E00315649 /* ExtendViewController.swift */,
+				3B06B0022414F11B00E5AD4E /* BalanceViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -115,7 +145,7 @@
 			path = "Supporting File";
 			sourceTree = "<group>";
 		};
-		3B1274D2240B751E00315649 /* Modal */ = {
+		3B1274D2240B751E00315649 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				3F04F851240CF6D200C32FF7 /* Transaction.swift */,
@@ -124,7 +154,7 @@
 				3F04F855240D07CD00C32FF7 /* DataProvider.swift */,
 				3B07A300240D7B300081891E /* SqlDataProvider.swift */,
 			);
-			path = Modal;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3B1274D7240B75C700315649 /* Extension */ = {
@@ -141,6 +171,7 @@
 				3BEF967D240A776E009BD4D3 /* My Money */,
 				3BEF967C240A776E009BD4D3 /* Products */,
 				3B07A2FA240D7A510081891E /* Frameworks */,
+				2CBC6011F709BA9A63FA7CC9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,7 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				3B1274D7240B75C700315649 /* Extension */,
-				3B1274D2240B751E00315649 /* Modal */,
+				3B1274D2240B751E00315649 /* Model */,
 				3B1274D0240B74A500315649 /* View */,
 				3B1274CF240B748800315649 /* Controller */,
 				3B1274D1240B74E100315649 /* Supporting File */,
@@ -184,9 +215,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BEF968F240A7770009BD4D3 /* Build configuration list for PBXNativeTarget "My Money" */;
 			buildPhases = (
+				E9CF011C4E2D8E481A7DD7FC /* [CP] Check Pods Manifest.lock */,
 				3BEF9677240A776E009BD4D3 /* Sources */,
 				3BEF9678240A776E009BD4D3 /* Frameworks */,
 				3BEF9679240A776E009BD4D3 /* Resources */,
+				83BCEF06B4FFABB5EC4682FA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -244,6 +277,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		83BCEF06B4FFABB5EC4682FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-My Money/Pods-My Money-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-My Money/Pods-My Money-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-My Money/Pods-My Money-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9CF011C4E2D8E481A7DD7FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-My Money-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3BEF9677240A776E009BD4D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -256,11 +331,16 @@
 				3F04F856240D07CD00C32FF7 /* DataProvider.swift in Sources */,
 				3BEF967F240A776E009BD4D3 /* AppDelegate.swift in Sources */,
 				3B703C44240EF05000ADBDB1 /* Wallet.swift in Sources */,
+				3B06B0032414F11B00E5AD4E /* BalanceViewController.swift in Sources */,
+				3BC19DCD24152FF000B5F21C /* WalletDetailViewController.swift in Sources */,
+				3B1974542416BF1E006F6C22 /* TransDetailTableViewController.swift in Sources */,
+				3B06B00524150FF200E5AD4E /* WalletTableViewController.swift in Sources */,
 				3F04F852240CF6D200C32FF7 /* Transaction.swift in Sources */,
 				3F7BFE67240BB49B0036D53D /* GroupTableViewController.swift in Sources */,
 				3BC19712240C12C500E7723A /* GroupSelectTableViewCell.swift in Sources */,
 				3B07A301240D7B300081891E /* SqlDataProvider.swift in Sources */,
 				3B07A2FF240D7AE50081891E /* MyMoneySQL.m in Sources */,
+				3B19745224163B36006F6C22 /* TransactionTableViewCell.swift in Sources */,
 				3B45DBFB240A7E2F0038FCC3 /* TransactionViewController.swift in Sources */,
 				3B1274D6240B758E00315649 /* ExtendViewController.swift in Sources */,
 				3BEF9681240A776E009BD4D3 /* SceneDelegate.swift in Sources */,
@@ -409,6 +489,7 @@
 		};
 		3BEF9690240A7770009BD4D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A134D2637741E55BEFD0E6FF /* Pods-My Money.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -430,6 +511,7 @@
 		};
 		3BEF9691240A7770009BD4D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D386CB9EEE18F5E3266CC557 /* Pods-My Money.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

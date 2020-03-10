@@ -16,6 +16,7 @@ class WalletViewController: UIViewController {
         
         setupNavigationBar()
         
+        
     }
     
     

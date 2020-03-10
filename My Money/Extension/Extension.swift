@@ -13,6 +13,7 @@ extension UIViewController {
     func setupNavigationBar() {
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
         UINavigationBar.appearance().barTintColor = .black
     }
