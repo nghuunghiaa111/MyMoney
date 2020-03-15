@@ -17,6 +17,14 @@ extension UIViewController {
         
         UINavigationBar.appearance().barTintColor = .black
     }
+    
+    func formatPrice(price: Int) -> String {
+        let formater = NumberFormatter()
+        formater.groupingSeparator = ","
+        formater.numberStyle = .decimal
+        formater.locale = Locale(identifier: "vi_VN")
+        return formater.string(for: price) ?? "0"
+    }
 }
 
 extension UINavigationController {
@@ -26,4 +34,6 @@ extension UINavigationController {
     }
   }
 }
+
+
 

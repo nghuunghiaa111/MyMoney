@@ -15,6 +15,7 @@
 		3B1274D4240B758200315649 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1274D3240B758200315649 /* ChartViewController.swift */; };
 		3B1274D6240B758E00315649 /* ExtendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1274D5240B758E00315649 /* ExtendViewController.swift */; };
 		3B1274D9240B760700315649 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1274D8240B760700315649 /* Extension.swift */; };
+		3B12DD3F241E62B000CE06C6 /* ChooseWalletTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B12DD3E241E62B000CE06C6 /* ChooseWalletTableViewController.swift */; };
 		3B19745224163B36006F6C22 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19745124163B36006F6C22 /* TransactionTableViewCell.swift */; };
 		3B1974542416BF1E006F6C22 /* TransDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1974532416BF1E006F6C22 /* TransDetailTableViewController.swift */; };
 		3B45DBFB240A7E2F0038FCC3 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45DBFA240A7E2F0038FCC3 /* TransactionViewController.swift */; };
@@ -48,6 +49,7 @@
 		3B1274D3240B758200315649 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		3B1274D5240B758E00315649 /* ExtendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendViewController.swift; sourceTree = "<group>"; };
 		3B1274D8240B760700315649 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		3B12DD3E241E62B000CE06C6 /* ChooseWalletTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseWalletTableViewController.swift; sourceTree = "<group>"; };
 		3B19745124163B36006F6C22 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionTableViewCell.swift; path = "My Money/Controller/TransactionTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		3B1974532416BF1E006F6C22 /* TransDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransDetailTableViewController.swift; sourceTree = "<group>"; };
 		3B45DBFA240A7E2F0038FCC3 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				3BC19711240C12C500E7723A /* GroupSelectTableViewCell.swift */,
 				3F04F857240D146900C32FF7 /* NoteViewController.swift */,
 				3F04F859240D201B00C32FF7 /* AdjustDateViewController.swift */,
+				3B12DD3E241E62B000CE06C6 /* ChooseWalletTableViewController.swift */,
 			);
 			path = TransactionViewController;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				3B07A301240D7B300081891E /* SqlDataProvider.swift in Sources */,
 				3B07A2FF240D7AE50081891E /* MyMoneySQL.m in Sources */,
 				3B19745224163B36006F6C22 /* TransactionTableViewCell.swift in Sources */,
+				3B12DD3F241E62B000CE06C6 /* ChooseWalletTableViewController.swift in Sources */,
 				3B45DBFB240A7E2F0038FCC3 /* TransactionViewController.swift in Sources */,
 				3B1274D6240B758E00315649 /* ExtendViewController.swift in Sources */,
 				3BEF9681240A776E009BD4D3 /* SceneDelegate.swift in Sources */,

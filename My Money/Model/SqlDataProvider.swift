@@ -49,8 +49,8 @@ class SqlDataProvider: NSObject {
         sqlite3_close(db)
     }
     
-    static func insertTransaction(money: Int, group: String, note: String, date: String, walletType: String) {
-        let strInsert = "insert into Trans(money, groupType, note, date, walletType) values (\(money),'\(group)','\(note)','\(date)','\(walletType)')"
+    static func insertTransaction(money: Int, group: String, note: String, date: String, walletType: String, type: Int) {
+        let strInsert = "insert into Trans(money, groupType, note, date, walletType, type) values (\(money),'\(group)','\(note)','\(date)','\(walletType)',\(type))"
         updateDatabase(strInsert)
     }
 }

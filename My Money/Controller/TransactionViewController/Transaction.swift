@@ -15,4 +15,5 @@ class Transaction {
     var note = ""
     var date = ""
     var walletType = ""
+    var type: Int = 0
 }

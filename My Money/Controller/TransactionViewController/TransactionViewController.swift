@@ -11,6 +11,7 @@ import UIKit
 class TransactionViewController: UITableViewController, UITextFieldDelegate {
     
     var money:Int = 0
+    var type: Int = 0
     
     @IBOutlet weak var moneyTextField: UITextField!
     @IBOutlet weak var groupNameLabel: UILabel!
@@ -23,15 +24,16 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         let name = DataProvider.transactionBus.changeNameGroupType()
-        groupImageView.image = UIImage.init(named: name)
-        groupNameLabel.text = name
+        groupImageView.image = UIImage.init(named: name["name"] as! String)
+        groupNameLabel.text = (name["name"] as! String)
+        type = name["type"] as! Int
         noteLabel.text = DataProvider.transactionBus.readNote()
         if DataProvider.transactionBus.writeDate() == "" {
             dateLabel.text = getCurrentDate()
         } else {
             dateLabel.text = DataProvider.transactionBus.writeDate()
         }
-        if name != "" {
+        if name["name"] as! String != "" {
             groupImageView.backgroundColor = .clear
             groupNameLabel.textColor = .white
         } else {
@@ -163,7 +165,8 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
         if noteLabel.text != "Ghi chú" {
             note = noteLabel.text!
         }
-        SqlDataProvider.insertTransaction(money: money, group: groupNameLabel.text!, note: note, date: dateLabel.text!, walletType: walletNameLabel.text!)
+        print("Hello: \(type)")
+        SqlDataProvider.insertTransaction(money: money, group: groupNameLabel.text!, note: note, date: dateLabel.text!, walletType: walletNameLabel.text!, type: type)
         resetOption()
         self.dismiss(animated: true, completion: nil)
     }
@@ -178,7 +181,7 @@ class TransactionViewController: UITableViewController, UITextFieldDelegate {
     }
     
     func resetOption() {
-        DataProvider.transactionBus.chooseGroupType(nameGroup: "")
+        DataProvider.transactionBus.chooseGroupType(nameGroup: "", type: 0)
         DataProvider.transactionBus.readDate(date: "")
         DataProvider.transactionBus.writeNote(note: "")
     }

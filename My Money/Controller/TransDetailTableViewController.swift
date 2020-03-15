@@ -17,6 +17,16 @@ class TransDetailTableViewController: UITableViewController {
     
     var objTrans = Transaction()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        print(objTrans.type)
+        if objTrans.type == 0 {
+            moneyLabel.textColor = .red
+        } else {
+            moneyLabel.textColor = .green
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,7 +40,7 @@ class TransDetailTableViewController: UITableViewController {
         
         typeImage.image = UIImage(named: objTrans.group)
         typeLabel.text = objTrans.group
-        moneyLabel.text = String(objTrans.money)
+        moneyLabel.text = formatPrice(price: objTrans.money)
         dateLabel.text = objTrans.date
     }
     
@@ -42,6 +52,7 @@ class TransDetailTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 && indexPath.row == 0 {
+            DataProvider.transactionBus.deleteTransaction(id: objTrans.transactionID)
             navigationController?.popViewController(animated: true)
         }
     }

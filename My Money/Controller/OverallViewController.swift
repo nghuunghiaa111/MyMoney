@@ -17,7 +17,7 @@ class OverallViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         lstTranaction = DataProvider.transactionBus.getListTransaction()
-        moneyLabel.text = String(TransactionBussiness.getTotalAmout())
+        moneyLabel.text = String(DataProvider.transactionBus.getTotalPaidAmout())
         
     }
     

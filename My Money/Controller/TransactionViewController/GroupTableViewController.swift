@@ -65,11 +65,10 @@ class GroupTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let vc = storyboard?.instantiateViewController(withIdentifier: "AddTransactionVC") as! TransactionViewController
         if segmentControl.selectedSegmentIndex == 0 {
-            DataProvider.transactionBus.chooseGroupType(nameGroup: groupPaidTypes[indexPath.row])
+            DataProvider.transactionBus.chooseGroupType(nameGroup: groupPaidTypes[indexPath.row], type: 0)
         } else {
-            DataProvider.transactionBus.chooseGroupType(nameGroup: groupReceiptTypes[indexPath.row])
+            DataProvider.transactionBus.chooseGroupType(nameGroup: groupReceiptTypes[indexPath.row], type: 1)
         }
         
         navigationController?.popViewController(animated: true)

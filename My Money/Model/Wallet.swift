@@ -9,6 +9,7 @@
 import Foundation
 
 class Wallet {
+    var walletID = 0
     var totalAmout = 0
     var nameWallet = ""
 }

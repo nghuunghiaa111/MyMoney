@@ -10,6 +10,8 @@ import UIKit
 
 class WalletDetailViewController: UIViewController {
 
+    @IBOutlet weak var balanceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

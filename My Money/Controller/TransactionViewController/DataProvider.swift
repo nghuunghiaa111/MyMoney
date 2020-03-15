@@ -16,23 +16,11 @@ public class DataProvider {
         }
     }
     
-//    public static func formatPrice(price: String) -> String {
-//        let priceInt = Int(price)
-//        
-//        
-//        /*let formater = NumberFormatter()
-//        formater.groupingSeparator = ","
-//        formater.numberStyle = .decimal
-//        formater.locale = Locale(identifier: "vi_VN")
-//        return formater.string(for: priceInt) ?? "0"
-//        //return String(formater.string(from: NSNumber(value: priceInt ?? 0)) ?? "0")*/
-//    }
-    
     public static func changeFormatWeekday(weekday: String) -> String {
         switch weekday {
         case "Monday":
             return "Thứ hai"
-        case "Tuseday":
+        case "Tuesday":
             return "Thứ ba"
         case "Wednesday":
             return "Thứ tư"
